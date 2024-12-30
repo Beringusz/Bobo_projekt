@@ -1,0 +1,1034 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cae0f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.profile-card {
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header-image {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(rgb(0 0 0 / 70%), rgba(4, 9, 30, 0.7)), url('camin-memo.jpg'); /* Înlocuiește cu imaginea ta */
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-info {
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    border: 5px solid white;
+    display: flex;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.home {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+    text-align: left;
+}
+
+
+/* Stiluri pentru imaginea de fundal home.html*/
+.image-background {
+    background-image: url('unitbv.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+          
+}
+
+a {
+    text-decoration: none;
+    color: #0074C8;
+    font-weight: bold;
+}
+
+a.btn {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #0074C8;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #005f8a;
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+}
+
+/* Bara de navigare cu fundal transparent în interiorul profile-card */
+.profile-card {
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 30px;
+    position: relative; /* Așezăm elementele copil relative la acest container */
+}
+
+.navbar {
+    width: 100%;
+    background-color: transparent; /* Fundal transparent */
+    color: white; /* Text alb */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: none; /* Fără umbră */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute; /* Bara este fixată în partea de sus a profile-card */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Asigură că este deasupra altor elemente */
+}
+
+.navbar a {
+    color: white; /* Text alb */
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #005f8a; /* Culoare de hover */
+}
+
+
+
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center; /* Asigură alinierea săgeții cu textul */
+    text-decoration: none;
+    color: #0074C8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-toggle .arrow {
+    margin-left: 5px; /* Spațiu între text și săgeată */
+    font-size: 0.8em; /* Dimensiune mai mică pentru săgeată */
+    transition: transform 0.3s ease; /* Efect de rotire */
+}
+
+/* Rotirea săgeții când dropdown-ul este activ */
+.dropdown:hover .arrow {
+    transform: rotate(180deg); /* Rotire 180° */
+}
+
+/* Container dropdown */
+.nav-item {
+    position: relative;
+}
+
+/* Link-ul dropdown */
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0074C8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Săgeată lângă text */
+.dropdown-toggle .arrow {
+    margin-left: 5px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+/* Rotirea săgeții */
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* Meniul dropdown */
+.dropdown-menu {
+    display: none; /* Ascuns inițial */
+    position: absolute;
+    top: 100%; /* Apare sub text */
+    left: 0; /* Aliniere stânga */
+    background-color: white;
+    color: #0074C8;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 101;
+    padding: 10px 0;
+    min-width: 150px;
+}
+
+/* Afișare dropdown la hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Link-urile din meniul dropdown */
+.dropdown-menu a {
+    display: block;
+    padding: 5px 15px;
+    color: #0074C8;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #E9F5FF; /* Fundal albastru deschis */
+
+}
+
+
+/* Despre noi */
+.about-us {
+    background-color:whitesmoke;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+.coloana {
+    flex: 1;
+    flex-basis: 31%;
+    width: 33%;
+    border-radius: 10px;
+    margin: 2% 2% 2% 0%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.row-about {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about{
+    margin: 50px auto 50px auto;
+    width: 80%;
+}
+
+
+.DespreNoiChenar{
+
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 37.5px;
+    font-weight:normal;
+   text-align:left;
+   margin-right:50px;
+
+
+}
+.titlu_chenar_despre_noi{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin-right:50px;
+    margin-left:50px;
+    margin-bottom: 20px;
+
+}
+
+iframe{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.header-image-about{
+    width: 100%;
+    height:50vh;
+    position:relative;
+    background-image: linear-gradient(rgb(0 0 0 / 70%), rgba(4, 9, 30, 0.7)), url('camin-memo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.titlu_afis {
+    font-family: Arial, sans-serif;
+    font-size: 48px; 
+    font-weight: 500;
+    color: white;
+    position: absolute;  /* Poziționează titlul relativ la .header-image-about */
+    top: 50%;            /* Plasează titlul la mijlocul paginii pe verticală */
+    left: 50%;           /* Plasează titlul la mijlocul paginii pe orizontală */
+    transform: translate(-50%, -50%);  /* Centrează exact textul */
+    z-index: 10;         /* Asigură că titlul apare deasupra imaginii */
+    text-align: center;  /* Aliniază textul pe orizontală */
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+
+.navbar_despre_noi a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.0em;
+    transition: color 0.3s;
+}
+.navbar_despre_noi{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: none; /* Fără umbră */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;/* Bara este fixată în partea de sus a profile-card */
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar_despre_noi a:hover {
+    color: #005f8a; /* Galben auriu */
+}
+.navbar a:hover {
+    color: #005f8a; /* Galben auriu */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 5px 15px;
+    color: #0074C8;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #E9F5FF; /* Fundal albastru deschis */
+
+}
+
+
+.contact-form {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+  }
+  
+  .form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555555;
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-container button {
+    width: 100%;
+    background-color: #0078d7;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #005a9e;
+  }
+  
+
+  .contact-form {
+    width: 100%;
+  }
+  
+  .form-background {
+    background: linear-gradient(135deg, #b3cbde, #005f8a); /* Gradient profesional */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333333;
+    text-align: center;
+  }
+  
+/* Decontare */
+/* Formular decontare */
+
+body.anunturi{
+    margin: 20px 0px;
+}
+.decontare-form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.decontare-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.decontare-label {
+    display: block;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.decontare-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #f4f4f9;
+}
+
+.decontare-file-section {
+    margin-bottom: 20px;
+}
+
+.decontare-file-title {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.decontare-file-input {
+    margin-bottom: 10px;
+}
+
+.decontare-file {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    background-color: #f4f4f9;
+}
+
+.decontare-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.decontare-submit:hover {
+    background-color: #2980b9;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s linear;
+}
+body.anunturi{
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    display: block;
+}
+body.anunturi .header {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgb(0 0 0 / 70%), rgba(4, 9, 30, 0.7)), url('img/camin-memo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+body.anunturi .navbar {
+    top: 0;
+    left: 0;
+    width: 100%; /* Abarca todo el ancho de la pantalla */
+    background-color: transparent; /* Fondo semi-transparente */
+    color: white;
+    padding: 10px 20px;
+    z-index: 10; /* Asegura que la barra esté sobre otros elementos */
+    display: flex;
+    justify-content: space-between; /* Espaciado entre los elementos de la barra */
+    align-items: center;
+}
+body.anunturi .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+body.anunturi .navbar a:hover {
+    color: #005f8a; /* Culoare de hover */
+}
+body.anunturi .dropdown-toggle {
+    display: inline-flex;
+    align-items: center; /* Asigură alinierea săgeții cu textul */
+    text-decoration: none;
+    color: #0074C8;
+    font-weight: bold;
+    cursor: pointer;
+}
+body.anunturi .dropdown-toggle .arrow {
+    margin-left: 5px; /* Spațiu între text și săgeată */
+    font-size: 0.8em; /* Dimensiune mai mică pentru săgeată */
+    transition: transform 0.3s ease; /* Efect de rotire */
+}
+/* Rotirea săgeții când dropdown-ul este activ */
+body.anunturi .dropdown:hover .arrow {
+    transform: rotate(180deg); /* Rotire 180° */
+}
+/* Container dropdown */
+body.anunturi .nav-item {
+    position: relative;
+}
+/* Link-ul dropdown */
+body.anunturi .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0074C8;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Săgeată lângă text */
+body.anunturi .dropdown-toggle .arrow {
+    margin-left: 5px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+/* Rotirea săgeții */
+body.anunturi .dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+/* Meniul dropdown */
+body.anunturi .dropdown-menu {
+    display: none; /* Ascuns inițial */
+    position: absolute;
+    top: 100%; /* Apare sub text */
+    left: 0; /* Aliniere stânga */
+    background-color: white;
+    color: #0074C8;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 101;
+    padding: 10px 0;
+    min-width: 150px;
+}
+/* Afișare dropdown la hover */
+body.anunturi .dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Link-urile din meniul dropdown */
+body.anunturi .dropdown-menu a {
+    display: block;
+    padding: 5px 15px;
+    color: #0074C8;
+    text-decoration: none;
+    white-space: nowrap;
+}
+body.anunturi .dropdown-menu a:hover {
+    background-color: #E9F5FF; /* Fundal albastru deschis */
+
+}
+body.anunturi .wrapper{
+    padding: 0 10%;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+body.anunturi h1{
+    font-family: Arial, sans-serif;
+    font-size: 48px; 
+    font-weight: 500;
+    color: white;
+    position: absolute;  /* Poziționează titlul relativ la .header-image-about */
+    top: 50%;            /* Plasează titlul la mijlocul paginii pe verticală */
+    left: 50%;           /* Plasează titlul la mijlocul paginii pe orizontală */
+    transform: translate(-50%, -50%);  /* Centrează exact textul */
+    z-index: 10;         /* Asigură că titlul apare deasupra imaginii */
+    text-align: center;  /* Aliniază textul pe orizontală */
+}
+body.anunturi .container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+body.anunturi .box{
+    position: relative;
+    overflow: hidden;
+}
+body.anunturi .box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+body.anunturi .box .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0; /*Inițial invizibil*/
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+body.anunturi .box:hover img {
+    filter: brightness(50%); /*Întunecă imaginea când se deplasează mouse-ul*/
+}
+
+body.anunturi .box:hover .info {
+    opacity: 1; /*Afișa textul și butonul atunci când treceți cu indicatorul*/
+    visibility: visible;
+}
+body.anunturi .box h3{
+    color: #fff;
+    padding: 10px 0;
+    font-size: 1.25rem;
+}
+body.anunturi .box p{
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+body.anunturi .box a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+body.anunturi .btn{
+    margin-top: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #0074C8;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+body.anunturi .btn:hover{
+    background-color: #005f8a;
+}
+body.anunturi .box:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*Autentificare*/
+
+.autentificare-form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.autentificare-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.autentificare-label {
+    display: block;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.autentificare-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #f4f4f9;
+}
+.autentificare-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar_aut {
+    width: 100%;
+    background-color: white; /* Fundal transparent */
+    border-radius: 20px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: none; /* Fără umbră */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute; /* Bara este fixată în partea de sus a profile-card */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Asigură că este deasupra altor elemente */
+}
+
+@media (max-width: 770px){
+    .wrapper{
+        padding: 20px;
+    }
+    .profile-card {
+        width: 95%;
+        padding: 10px;
+    }
+} 
+
+/*Adaugare*/
+
+.adaugare{
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    display: block;
+}
+.adaugare .header {
+    position:relative;
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgb(0 0 0 / 70%), rgba(4, 9, 30, 0.7)), url('img/camin-memo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    
+}
+.adaugare .navbar {
+    top: 0;
+    left: 0;
+    width: 100%; /* Abarca todo el ancho de la pantalla */
+    background-color: transparent; /* Fondo semi-transparente */
+    color: white;
+    padding: 10px 20px;
+    z-index: 10; /* Asegura que la barra esté sobre otros elementos */
+    display: flex;
+    justify-content: space-between; /* Espaciado entre los elementos de la barra */
+    align-items: center;
+}
+.adaugare .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+.adaugare .navbar a:hover {
+    color: #005f8a; /* Culoare de hover */
+}
+.adaugare .dropdown-toggle {
+    display: inline-flex;
+    align-items: center; /* Asigură alinierea săgeții cu textul */
+    text-decoration: none;
+    color: #0074C8;
+    font-weight: bold;
+    cursor: pointer;
+}
+.adaugare .dropdown-toggle .arrow {
+    margin-left: 5px; /* Spațiu între text și săgeată */
+    font-size: 0.8em; /* Dimensiune mai mică pentru săgeată */
+    transition: transform 0.3s ease; /* Efect de rotire */
+}
+/* Rotirea săgeții când dropdown-ul este activ */
+.adaugare .dropdown:hover .arrow {
+    transform: rotate(180deg); /* Rotire 180° */
+}
+/* Container dropdown */
+.adaugare .nav-item {
+    position: relative;
+}
+/* Link-ul dropdown */
+.adaugare .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0074C8;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Săgeată lângă text */
+.adaugare .dropdown-toggle .arrow {
+    margin-left: 5px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+/* Rotirea săgeții */
+.adaugare .dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+/* Meniul dropdown */
+.adaugare .dropdown-menu {
+    display: none; /* Ascuns inițial */
+    position: absolute;
+    top: 100%; /* Apare sub text */
+    left: 0; /* Aliniere stânga */
+    background-color: white;
+    color: #0074C8;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 101;
+    padding: 10px 0;
+    min-width: 150px;
+}
+/* Afișare dropdown la hover */
+.adaugare .dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Link-urile din meniul dropdown */
+.adaugare .dropdown-menu a {
+    display: block;
+    padding: 5px 15px;
+    color: #0074C8;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.adaugare .dropdown-menu a:hover {
+    background-color: #E9F5FF; /* Fundal albastru deschis */
+
+}
+.adaugare .wrapper{
+    padding: 0 10%;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.adaugare h1{
+    font-family: Arial, sans-serif;
+    font-size: 48px; 
+    font-weight: 500;
+    color: white;
+    position: absolute;  /* Poziționează titlul relativ la .header-image-about */
+    top: 50%;            /* Plasează titlul la mijlocul paginii pe verticală */
+    left: 50%;           /* Plasează titlul la mijlocul paginii pe orizontală */
+    transform: translate(-50%, -50%);  /* Centrează exact textul */
+    z-index: 10;         /* Asigură că titlul apare deasupra imaginii */
+    text-align: center;  /* Aliniază textul pe orizontală */
+}
+
+.contact-form {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+  }
+  
+  .form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555555;
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-container button {
+    width: 100%;
+    background-color: #0078d7;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #005a9e;
+  }
+  
+
+  .contact-form {
+    width: 100%;
+  }
+  
+  .form-background {
+    background: linear-gradient(135deg, #005a9b,#fefefe); /* Gradient profesional */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+  }
+  
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333333;
+    text-align: center;
+  }
+  

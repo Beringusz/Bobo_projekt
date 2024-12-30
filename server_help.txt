@@ -1,0 +1,5 @@
+1. Descarcă Node.js
+2. Ai o consolă care poate rula Node.js în interiorul ei (de exemplu, bash)
+3. Mergi în folderul Algoritmic-Minds-main din consolă
+4. Rulează serverul cu următoarea comandă: node server.js
+5. Deschide fișierul autentificare.html și testează dacă acreditările funcționează

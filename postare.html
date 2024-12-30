@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular Decontare Abonament</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="anunturi">
+    <div class="decontare-form-container">
+        <h2 class="decontare-title">Formular Decontare Abonament</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="decontare-form">
+            <!-- Nume și Prenume -->
+            <label for="name" class="decontare-label">Nume și Prenume:</label>
+            <input type="text" id="name" name="name" class="decontare-input" required placeholder="Introduceți numele și prenumele">
+    
+            <!-- Adresa de Email -->
+            <label for="email" class="decontare-label">Adresa de Email:</label>
+            <input type="email" id="email" name="email" class="decontare-input" required placeholder="Introduceți adresa de email">
+    
+            <!-- Facultatea -->
+            <label for="faculty" class="decontare-label">Facultatea:</label>
+            <input type="text" id="faculty" name="faculty" class="decontare-input" required placeholder="Introduceți numele facultății">
+    
+            <!-- Buletin -->
+            <div class="decontare-file-section">
+                <h3 class="decontare-file-title">Documente de Identitate</h3>
+                <div class="decontare-file-input">
+                    <label for="id-card" class="decontare-label">Buletin:</label>
+                    <input type="file" id="id-card" name="id_card" class="decontare-file" accept=".jpg,.jpeg,.png,.pdf" required>
+                </div>
+                <div class="decontare-file-input">
+                    <label for="passport" class="decontare-label">Pașaport:</label>
+                    <input type="file" id="passport" name="passport" class="decontare-file" accept=".jpg,.jpeg,.png,.pdf">
+                </div>
+            </div>
+    
+            <!-- Fișa de Decontare -->
+            <div class="decontare-file-section">
+                <h3 class="decontare-file-title">Documente de Decontare</h3>
+                <div class="decontare-file-input">
+                    <label for="expense-form" class="decontare-label">Fișa de Decontare:</label>
+                    <input type="file" id="expense-form" name="expense_form" class="decontare-file" accept=".jpg,.jpeg,.png,.pdf" required>
+                </div>
+                <div class="decontare-file-input">
+                    <label for="receipt" class="decontare-label">Bon Fiscal Abonament Transport:</label>
+                    <input type="file" id="receipt" name="receipt" class="decontare-file" accept=".jpg,.jpeg,.png,.pdf" required>
+                </div>
+            </div>
+    
+            <!-- Submit -->
+            <input type="submit" value="Trimite Formular" class="decontare-submit">
+        </form>
+    </div>
+</body>
+</html>
+
+
+

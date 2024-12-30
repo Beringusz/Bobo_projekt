@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>autentificare</title>
+</head>
+<body>
+
+<nav class="navbar_aut">
+        <a href="despre-noi.html">Despre Noi</a>
+        <a href="anunturi.html">Anunțuri</a>
+        <a href="autentificare.html">Autentificare</a>
+</nav>
+
+  <div class="autentificare-form-container">
+        <h2 class="autentificare-title">Autentificare</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <!-- email si parola -->
+            <label for="email_inst" class="autentificare-label">Email institutional</label>
+            <input type="text" id="email_inst" class="autentificare-input" required="" placeholder="Introduceți emailul institutional">
+
+            <label for="parola" class="autentificare-label">Parola</label>
+            <input type="text" id="parola" class="autentificare-input" required="" placeholder="Introduceți parola">
+
+            <input type="submit" value="Intra in cont" class="autentificare-submit">
+        </form>
+    </div>
+<script src="autentificare.js"></script>
+</body>
+</html>

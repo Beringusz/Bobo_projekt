@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Adaugare Anunț</title>
+</head>
+<body class="adaugare">
+    
+    <header class="header">
+        <!-- Bara de navigare -->
+        <nav class="navbar">
+            <div class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">Cămin<span class="arrow">&#9662;</span> <!-- Săgeată jos --></a>
+                <div class="dropdown-menu">
+                    <a href="#">Cămin 1</a>
+                    <a href="#">Cămin 2</a>
+                    <a href="#">Cămin 3</a>
+                    <a href="index.html">Cămin 4</a>
+                    <a href="#">Cămin 5</a>
+                    <a href="#">Cămin 8</a>
+                    <a href="#">Cămin 9</a>
+                    <a href="#">Cămin 10</a>
+                    <a href="#">Cămin 11</a>
+                    <a href="#">Cămin 12</a>
+                    <a href="#">Cămin 14</a>
+                    <a href="#">Cămin 15</a>
+                    <a href="#">Cămin 16</a>
+                </div>
+            </div>
+            <a href="despre-noi.html">Despre Noi</a>
+            <a href="anunturi.html">Anunțuri</a>
+            <a href="autentificare.html">Autentificare</a>
+            <a href="adaugare.html">Adaugare</a>
+        </nav>
+        <h1>Adaugare Anunț</h1>
+    </header>
+    <section class="contact-form">
+        <div class="form-background">
+          <div class="form-container">
+            <h2>Postarea anuntului</h2>
+            <form action="mailto:bella_anutza14@yahoo.com?subject=Sesizare Formular" method="POST" enctype="text/plain">
+                <label for="name">Numele utilizatorului:</label>
+                <input type="text" id="name" name="name" placeholder="Introdu numele și prenumele" required>
+              
+                <label for="room">Titlul anuntului:</label>
+                <input type="text" id="room" name="room" placeholder="Introdu numărul camerei" required>
+              
+                <label for="message">Anuntul:</label>
+                <textarea id="message" name="message" placeholder="Descrie problema sau întrebarea ta" required></textarea>
+              
+                <button type="submit">Postare</button>
+              </form>
+              
+          </div>
+        </div>
+      </section>
+</body>
+</html>
