@@ -17,7 +17,7 @@ document.querySelector('.autentificare-submit').addEventListener('click', async 
 
     const result = await response.json();
     if (result.success) {
-        alert('Login successful!');
+        window.open("adaugare.html");
     } else {
         alert('Invalid credentials. Please try again.');
     }
