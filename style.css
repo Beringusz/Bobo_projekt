@@ -28,7 +28,7 @@ body {
 .header-image {
     width: 100%;
     height: 150px;
-    background-image: linear-gradient(rgb(0 0 0 / 70%), rgba(4, 9, 30, 0.7)), url('camin-memo.jpg'); /* Înlocuiește cu imaginea ta */
+    background-image: linear-gradient(rgb(0 0 0 / 70%), rgba(4, 9, 30, 0.7)), url('img/camin-memo.jpg'); /* Înlocuiește cu imaginea ta */
     background-size: cover;
     background-position: center;
 }
@@ -62,7 +62,7 @@ h1 {
 
 /* Stiluri pentru imaginea de fundal home.html*/
 .image-background {
-    background-image: url('unitbv.jpg');
+    background-image: url('img/unitbv.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -285,7 +285,7 @@ iframe{
     width: 100%;
     height:50vh;
     position:relative;
-    background-image: linear-gradient(rgb(0 0 0 / 70%), rgba(4, 9, 30, 0.7)), url('camin-memo.jpg');
+    background-image: linear-gradient(rgb(0 0 0 / 70%), rgba(4, 9, 30, 0.7)), url('img/camin-memo.jpg');
     background-size: cover;
     background-position: center;
 }

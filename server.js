@@ -73,6 +73,18 @@ app.post('/save-announcement', (req, res) => {
   });
 });
 
+app.get('/get-announcements', (req, res) => {
+  fs.readFile(FILE_PATH, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading announcements:', err);
+      return res.status(500).send('Error reading announcements.');
+    }
+
+    const announcements = JSON.parse(data);
+    res.json(announcements);
+  });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
