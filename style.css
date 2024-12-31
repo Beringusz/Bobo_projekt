@@ -706,6 +706,7 @@ body.anunturi .box h3{
 body.anunturi .box p{
     color: #fff;
     font-size: 1rem;
+    text-align: center;
     line-height: 1.6;
 }
 body.anunturi .box a{
