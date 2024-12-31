@@ -3,3 +3,6 @@
 3. Mergi în folderul Algoritmic-Minds-main din consolă
 4. Rulează serverul cu următoarea comandă: node server.js
 5. Deschide fișierul autentificare.html și testează dacă acreditările funcționează
+6. Puteți ieși din server cu următoarea combinație de taste: CTRL + C
+7. Pentru a testa corect funcționalitatea site-ului, după ce porniți serverul, tastați următoarele în caseta URL:
+   "http://localhost:3000/WEBSITE", unde WEBSITE este adresa HTML (de exemplu, autentificare.html)

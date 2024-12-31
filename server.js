@@ -1,13 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
+const path = require('path');
 const csv = require('csv-parser');
 
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+app.use(express.static(__dirname));
 app.use(express.json());
+app.use(cors());
 
 const readCSV = async () => {
     const users = [];
@@ -38,6 +40,37 @@ app.post('/check-credentials', async (req, res) => {
         console.error(error);
         res.status(500).send('Server error');
     }
+});
+
+//adagarea anuntelor
+const FILE_PATH = path.join(__dirname, 'announcements.json');
+
+// Endpoint to save an announcement
+app.post('/save-announcement', (req, res) => {
+  const newAnnouncement = req.body;
+
+  // Read existing announcements
+  fs.readFile(FILE_PATH, 'utf8', (err, data) => {
+    if (err && err.code !== 'ENOENT') {
+      console.error(err);
+      return res.status(500).send('Error reading file.');
+    }
+
+    const announcements = data ? JSON.parse(data) : [];
+
+    // Append the new announcement
+    announcements.push(newAnnouncement);
+
+    // Write back to the file
+    fs.writeFile(FILE_PATH, JSON.stringify(announcements, null, 2), 'utf8', (err) => {
+      if (err) {
+        console.error(err);
+        return res.status(500).send('Error saving announcement.');
+      }
+
+      res.status(200).send('Announcement saved successfully!');
+    });
+  });
 });
 
 app.listen(PORT, () => {
