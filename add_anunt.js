@@ -19,6 +19,7 @@ document.getElementById('anunt-adaugare').addEventListener('submit', async (e) =
     // Handle server response
     if (response.ok) {
       alert('Announcement saved successfully!');
+      window.open("http://localhost:3000/anunturi.html")
     } else {
       alert('Failed to save announcement. Try again.');
     }
